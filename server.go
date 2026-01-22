@@ -50,8 +50,9 @@ func addDevice(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
-// DELETE: Очищення
+// DELETE
 func clearLog(w http.ResponseWriter, r *http.Request) {
 	os.Remove(logFile)
 	fmt.Fprint(w, "Log Cleared")
 }
+
